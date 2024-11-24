@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter</title>
+    <script>
+        function convertCase() {
+            // Get the input element
+            const inputField = document.getElementById('textInput');
+            // Get the current value of the input
+            let inputValue = inputField.value;
+
+            // Variable to hold the converted value
+            let convertedValue;
+
+            // Check if the input is in upper case
+            if (inputValue === inputValue.toUpperCase()) {
+                // Convert to lower case
+                convertedValue = inputValue.toLowerCase();
+            } 
+            // Check if the input is in lower case
+            else if (inputValue === inputValue.toLowerCase()) {
+                // Convert to upper case
+                convertedValue = inputValue.toUpperCase();
+            } else {
+                // If it's mixed case, keep it unchanged or handle as needed
+                convertedValue = inputValue; // You can choose to handle this differently
+            }
+
+            // Update the input field with the converted value
+            inputField.value = convertedValue;
+
+            // Display the conversion result
+            const resultDisplay = document.getElementById('resultDisplay');
+            resultDisplay.textContent = `Converted Value: ${convertedValue}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Case Converter</h1>
+    <input type="text" id="textInput" onchange="convertCase()" placeholder="Type something...">
+    <div id="resultDisplay" style="margin-top: 20px; font-weight: bold;"></div>
+</body>
+</html>

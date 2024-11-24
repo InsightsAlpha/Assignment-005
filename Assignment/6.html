@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Div Color</title>
+    <style>
+        .color-div {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            transition: background-color 0.3s;
+        }
+    </style>
+    <script>
+        function changeColor() {
+            document.getElementById("colorDiv").style.backgroundColor = "yellow";
+        }
+        function revertColor() {
+            document.getElementById("colorDiv").style.backgroundColor = "red";
+        }
+    </script>
+</head>
+<body>
+    <div id="colorDiv" class="color-div" onmouseover="changeColor()" onmouseout="revertColor()"></div>
+</body>
+</html>
